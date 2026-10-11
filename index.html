@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Classic Neon Pong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="header">
+      <h1 class="title">NEON PONG</h1>
+    </header>
+
+    <div class="controls-bar">
+      <div class="setting-group">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" class="select-input">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="btn-group">
+        <button id="startBtn" class="btn primary-btn">Start Game</button>
+        <button id="resetBtn" class="btn secondary-btn">Reset</button>
+        <button id="soundBtn" class="btn icon-btn" aria-label="Toggle Sound">🔊 Sound</button>
+      </div>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-card player-score">
+        <span class="player-label">PLAYER</span>
+        <span id="playerScore" class="score-number">0</span>
+      </div>
+      <div class="score-divider">:</div>
+      <div class="score-card ai-score">
+        <span id="aiScore" class="score-number">0</span>
+        <span class="player-label">COMPUTER AI</span>
+      </div>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="pongCanvas" width="800" height="500"></canvas>
+      <div id="gameOverlay" class="overlay">
+        <div class="overlay-content">
+          <h2 id="overlayTitle">NEON PONG</h2>
+          <p id="overlaySub">Press Start or spacebar to play</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-controls">
+      <p class="touch-hint">Mobile Controls: Touch & Drag canvas OR use buttons</p>
+      <div class="touch-buttons">
+        <button id="btnUp" class="touch-btn">▲ UP</button>
+        <button id="btnDown" class="touch-btn">▼ DOWN</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Controls: <kbd>W</kbd> / <kbd>S</kbd> or <kbd>↑</kbd> / <kbd>↓</kbd> Keys • Touch / Drag on Mobile • <kbd>Space</kbd> Pause</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
